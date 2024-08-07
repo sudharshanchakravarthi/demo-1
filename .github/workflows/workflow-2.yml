@@ -19,7 +19,7 @@ jobs:
             - name: install dependencies
               run: npm ci
             - name: Test the code
-              run: npn run test
+              run: npm run test
     Build:
         needs: test
         runs-on: ubuntu-latest
