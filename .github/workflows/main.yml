@@ -1,4 +1,4 @@
-name: workflow 2
+name: Deploy
 on:
     push:
         branches:
@@ -43,5 +43,10 @@ jobs:
         needs: Build
         runs-on: ubuntu-latest
         steps:
-            - name: Deploy the application
-              run: echo "Deployment is done!!!"
+            - name: Download the artifacts
+              uses: actions/download-artifact@v3
+              with:
+                name: dist-files
+            - name: outpur the files
+              run: ls
+              
