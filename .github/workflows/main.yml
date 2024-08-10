@@ -55,5 +55,5 @@ jobs:
             - name: outpur the files
               run: ls
             - name: outputs from previous
-              run: echo "${{needs.Build.outputs.script-file}}"
+              run: echo "${{ needs.Build.outputs.script-file }}"
               
